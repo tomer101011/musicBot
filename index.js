@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
-const { prefix } = require("./config.json");
+const prefix = process.env.PREFIX;
 // const token = require('dotenv').config().parsed.token;
+require('dotenv').config();
 const ytdl = require("ytdl-core");
 
 const client = new Discord.Client();
@@ -139,4 +140,4 @@ function play(guild, song) {
     serverQueue.textChannel.send(`Start playing: **${song.title}**`);
 }
 
-// client.login(token);
+client.login();
