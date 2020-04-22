@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
-const { prefix } = require("./config.json");
+const { prefix } = require(".env");
 const aws = require('aws-sdk');
 
-let configVars = new aws.S3({
-  token: process.env.token,
+let s3 = new aws.S3({
+  token: process.env.token
 });
-
+console.log(s3.token);
 const ytdl = require("ytdl-core");
 
 const client = new Discord.Client();
@@ -144,4 +144,4 @@ function play(guild, song) {
     serverQueue.textChannel.send(`Start playing: **${song.title}**`);
 }
 
-client.login(configVars.token);
+client.login(s3.token);
