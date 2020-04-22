@@ -1,11 +1,8 @@
 const Discord = require("discord.js");
 
-const aws = require('aws-sdk');
-let s3 = new aws.S3({
-  token: process.env.TOKEN,
-  prefix: process.env.PREFIX
-});
-console.log(s3.token);
+let s3= require('dotenv').config();
+const token= s3.parsed.TOKEN;
+const prefix= s3.parsed.PREFIX;
 
 const ytdl = require("ytdl-core");
 
@@ -145,4 +142,4 @@ function play(guild, song) {
     serverQueue.textChannel.send(`Start playing: **${song.title}**`);
 }
 
-client.login();
+client.login(token);
