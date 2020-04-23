@@ -1,10 +1,8 @@
 const Discord = require("discord.js");
 
-let s3= require('dotenv').config();
-const token= s3.parsed.TOKEN;
-const prefix= s3.parsed.PREFIX;
-console.log(s3.parsed.TOKEN);
-console.log(s3.parsed.PREFIX);
+require('dotenv').config();
+const prefix= process.env.PREFIX;
+const token= process.env.TOKEN;
 
 
 const ytdl = require("ytdl-core");
