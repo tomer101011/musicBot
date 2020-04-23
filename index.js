@@ -3,7 +3,6 @@ const Discord = require("discord.js");
 require('dotenv').config();
 const prefix= process.env.PREFIX;
 const token= process.env.TOKEN;
-var port = process.env.PORT || 1337;
 
 
 const ytdl = require("ytdl-core");
