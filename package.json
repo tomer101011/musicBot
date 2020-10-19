@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "author": "Tomer",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "dotenv": "^8.2.0",
     "ffmpeg": "0.0.4",
     "ffmpeg-binaries": "^3.2.2",
-    "ytdl-core": "^2.1.0"
+    "nodemon": "^2.0.5",
+    "ytdl-core": "^3.4.1"
   }
 }

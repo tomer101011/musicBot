@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 
 require('dotenv').config();
-const prefix= process.env.PREFIX;
-const token= process.env.TOKEN;
+const prefix = process.env.PREFIX;
+const token = process.env.TOKEN;
 
 
 const ytdl = require("ytdl-core");
@@ -69,11 +69,11 @@ async function execute(message, serverQueue) {
             "I need the permissions to join and speak in your porg channel!"
         );
     }
-
     const songInfo = await ytdl.getInfo(args[1]);
+
     const song = {
-        title: songInfo.title,
-        url: songInfo.video_url
+        title: songInfo.videoDetails.title,
+        url: songInfo.videoDetails.video_url
     };
 
     if (!serverQueue) {
